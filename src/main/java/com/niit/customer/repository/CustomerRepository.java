@@ -1,4 +1,7 @@
 package com.niit.customer.repository;
 
-public interface CustomerRepository {
+import com.niit.customer.domain.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 }

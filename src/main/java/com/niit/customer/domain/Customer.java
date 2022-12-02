@@ -7,4 +7,16 @@ public class Customer {
     private String email;
     private String address;
     private long phone;
+
+    public Customer() {
+    }
+
+    public Customer(int id, String firstname, String lastname, String email, String address, long phone) {a
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
+    }
 }

@@ -3,9 +3,12 @@ package com.niit.customer.service;
 import com.niit.customer.domain.Customer;
 import com.niit.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+@Service
 public class CustomerService implements ICustomerService{
     private CustomerRepository customerRepository;
 
@@ -16,16 +19,16 @@ public class CustomerService implements ICustomerService{
 
     @Override
     public Customer save(Customer customer) {
-        return null;
+        return customerRepository.save(customer);
     }
 
     @Override
     public List<Customer> getAll() {
-        return null;
+        return customerRepository.findAll();
     }
 
     @Override
-    public Customer getByID(int id) {
-        return null;
+    public Optional<Customer> getByID(int id) {
+        return customerRepository.findById(id);
     }
 }

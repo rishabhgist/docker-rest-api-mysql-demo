@@ -1,6 +1,11 @@
 package com.niit.customer.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
+    @Id
     private int id;
     private String firstname;
     private String lastname;
